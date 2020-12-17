@@ -26,13 +26,23 @@ input[type=text], input[type=password], input[type=email] {
 }
 
 header {
-  overflow: hidden;
-  display: flex;
-  align-items: baseline;
+    overflow: hidden;
+    display: flex;
+    align-items: baseline;
+    align-items: center;
+
 }
 
 header > .login-info {
-  margin-left: auto;
+    margin-left: auto;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: baseline;
+}
+
+.title-logo {
+    padding-left: 1em;
 }
 
 main {
@@ -54,8 +64,8 @@ main {
 }
 
 .button {
-  padding: .5em;
-  background-color: white;
+  padding: .25em;
+  background-color: transparent;
   border: solid 1px #244751;
   display: inline-block;
 }
@@ -66,7 +76,7 @@ main {
 
 .user-info {
   display: flex;
-  align-items: baseline;
+  align-items: center;
 }
 
 .user-info img {
@@ -96,8 +106,7 @@ main {
 }
 
 .actions button.user-like {
-  color: #FF2600;
-  border-color: #FF2600;
+  background-color: transparent;
 }
 
 .actions .comment-count {

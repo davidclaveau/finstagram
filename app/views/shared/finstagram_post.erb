@@ -1,0 +1,34 @@
+<article class="finstagram-post">
+  <div class="user-info">
+    <img src="<%= finstagram_post.user.avatar_url %>" alt="<%= finstagram_post.user.username %>">
+    <h2 class="username"><%= finstagram_post.user.username %></h2>
+    <h3 class="humanized-time"><%= finstagram_post.humanized_time_ago %></h3>
+  </div>
+  <a class="photo" href="/finstagram_posts/<%= finstagram_post.id %>">
+    <img src="<%= finstagram_post.photo_url %>" alt="finstagram post from <%= finstagram_post.user.username %>">
+  </a>
+  <div class="actions">
+      <div class="action-text">
+        <%= erb(:"shared/likes", { locals: { finstagram_post: finstagram_post }}) %>
+      </div>
+        <span class="comment-count action-text">
+            <% if finstagram_post.comment_count == 1 %>
+                <%= finstagram_post.comment_count %> comment
+            <% else %>
+                <%= finstagram_post.comment_count %> comments
+            <% end %>
+        </span>
+  </div>
+    <% if current_user && allow_new_comment %>
+        <%= erb(:"shared/new_comment", { locals: { finstagram_post: finstagram_post }}) %>
+    <% end %>
+    <ul class="comments">
+        <% finstagram_post.comments.each do |comment| %>
+        <li>
+            <p>
+            <%= comment.user.username %>: <%= comment.text %>
+            </p>
+        </li>
+        <% end %>
+    </ul>
+</article>

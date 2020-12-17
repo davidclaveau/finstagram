@@ -1,0 +1,74 @@
+header {
+    background-color: #244751;
+    color: #E8FDFF;
+}
+
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Noto Sans TC, sans-serif'; 
+}
+
+main {
+    background-color: white;
+    padding: 16px;
+}
+
+.finstagram-post {
+    margin-bottom: 48px;
+}
+
+.finstagram-post .user-info img {
+    border-radius: 50%;
+}
+
+.action-text {
+    background: #244751;
+    border-radius: 3px;
+    padding: 1px 4px 1px 4px;
+    color: #E8FDFF;
+    font-weight: bold;
+}
+
+a.photo {
+    transition: padding 0.5s;
+}
+
+a.photo:hover {
+    padding: 10px;
+    transition: padding 0.5s;
+}
+
+@media screen and (max-width: 480px) {
+
+    main {
+        width: 90%;
+    }
+
+    .login-info {
+        flex-flow: column;
+    }
+
+    .username {
+        font-size: 16px;
+    }
+
+    .humanized-time {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .title-logo {
+        font-size: 24px;
+    }
+
+    .username {
+        display: none;
+    }
+
+    .humanized-time {
+        font-size: 14px;
+    }
